@@ -10,4 +10,5 @@ Make sure you have [Node.js](http://nodejs.org/)
 
 ```sh
 npm install
+create a database file in the root named: db.json
 ```

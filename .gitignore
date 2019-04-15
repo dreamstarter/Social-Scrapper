@@ -1,6 +1,9 @@
 # Ignore all dotfiles...
 .*
 
+# Ignore local db files
+db.json
+
 # except for .gitignore and .gitkeep
 !.gitignore
 !.gitkeep
