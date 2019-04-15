@@ -1,6 +1,7 @@
 import express from 'express';
 import { getInstagramCount, getTwitterCount} from './lib/scrapper';
 import db from './lib/db';
+import './lib/cron';
 
 const app = express();
 
@@ -10,19 +11,7 @@ app.get('/scrape', async (request, response, next) => {
         getInstagramCount(),
         getTwitterCount(),    
     ]);
-    console.log(iCount, tCount);
-    db.get('twitter')
-        .push({
-            date: Date.now(),
-            count: tCount
-        }).write();
-    db.get('instagram')
-        .push({
-            date: Date.now(),
-            count: iCount
-        })
-        .write();
-    response.json({iCount, tCount})
+    response.json({iCount, tCount});
 });
 
 app.listen(3000, () => {
