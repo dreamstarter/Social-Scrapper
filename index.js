@@ -11,6 +11,17 @@ app.get('/scrape', async (request, response, next) => {
         getTwitterCount(),    
     ]);
     console.log(iCount, tCount);
+    db.get('twitter')
+        .push({
+            date: Date.now(),
+            count: tCount
+        }).write();
+    db.get('instagram')
+        .push({
+            date: Date.now(),
+            count: iCount
+        })
+        .write();
     response.json({iCount, tCount})
 });
 
