@@ -1,4 +1,4 @@
-## Node.js App
+## Social Scrapper
 
 This is a simple program that will scrap the number of followers from both Twitter and Instagram and return the values.
 

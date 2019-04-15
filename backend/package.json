@@ -1,12 +1,12 @@
 {
-  "name": "scrapper-js",
+  "name": "scrapper-js backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -r esm index.js --ignore db.json"
   },
-  "author": "",
+  "author": "Bryan Anderson",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
@@ -15,7 +15,8 @@
     "express": "^4.16.4",
     "body-parser": "^1.18.3",
     "lowdb": "^1.0.0",
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "nodemon": "^1.18.11"
